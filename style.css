@@ -1,3 +1,4 @@
+@media (min-width: 1025px) {
 .topnav {
     position: fixed;
     top: 0;
@@ -6,6 +7,7 @@
     margin: 0;
     padding: 0;
     background-image: linear-gradient(to right, #805404 25%, yellow);
+    }
 }
 
 .topnav a {
@@ -13,9 +15,28 @@
     display: block;
     text-align: center;
     padding: 10px 18px;
-    font-size: ;
+    font-size: 20px;
 }
 
 .topnav a:hover {
-    background-color: mediumturquoise;
+    background-color: rgb(219, 145, 47);
+}
+
+h1 {
+    color: black;
+    font-size: 46px;
+}
+
+.sub-header {
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+@media only screen and(max-width: 380px) {
+    .topnav {
+        overflow: hidden;
+        background-image: linear-gradient(to right, #805404 25%, yellow);
+        position: fixed;
+    }
 }
