@@ -4,6 +4,12 @@
     background-size: 100vw 100vh;
 }
 
+body {
+    font-weight: bold;
+    text-shadow: rgb(255, 255, 255) 1px 0 10px;
+    letter-spacing: .1rem;
+}
+
 @media (min-width: 1025px) {
 .topnav {
     position: fixed;
@@ -13,6 +19,7 @@
     margin: 0;
     padding: 0;
     background-image: linear-gradient(to right, #805404 25%, yellow);
+    box-shadow: 0 0 10px rgb(75, 74, 74);
     }
 }
 
@@ -39,10 +46,15 @@ h1 {
     font-size: 24px;
 }
 
-@media only screen and(max-width: 380px) {
+@media (max-width: 380px) {
     .topnav {
-        overflow: hidden;
-        background-image: linear-gradient(to right, #805404 25%, yellow);
         position: fixed;
-    }
+        top: 0;
+        right: 0;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-image: linear-gradient(to right, #805404 25%, yellow);
+        box-shadow: 0 0 10px rgb(75, 74, 74);
+  }
 }
