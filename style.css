@@ -10,6 +10,10 @@ body {
     letter-spacing: .08rem;
 }
 
+article {
+    margin: .6%;
+}
+
 .topnav ul {
     list-style: none;    
     }
