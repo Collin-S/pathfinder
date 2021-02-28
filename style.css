@@ -14,21 +14,25 @@ article {
     margin: .6%;
 }
 
+.topnav {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+
 .topnav ul {
+    display: flex;
     list-style: none;    
     }
-    
-.topnav ul li {
-    float: right;
-} 
 
-.topnav ul li:first-child {
+.topnav ul:first-child {
+    display: flex;
     float: left;
 }
 
 .topnav a {
     float: left;
-    display: block;
+    display: flex;
     text-align: center;
     padding: 10px 18px;
     font-size: 20px;
@@ -90,6 +94,7 @@ h1 {
 
 @media (max-width: 380px) {
     .topnav {
+        overflow: hidden;
         position: static;
         top: 0;
         right: 0;
