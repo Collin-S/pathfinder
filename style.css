@@ -6,6 +6,7 @@
 
 body {
     font-family: 'Luminari', fantasy, sans-serif;
+    color: #0a3055;
     text-shadow: rgb(255, 255, 255) 1px 0 10px;
     letter-spacing: .08rem;
 }
@@ -25,13 +26,11 @@ article {
     list-style: none;    
     }
 
-.topnav ul:first-child {
+ul:first-child {
     display: flex;
-    float: left;
 }
 
 .topnav a {
-    float: left;
     display: flex;
     text-align: center;
     padding: 10px 18px;
@@ -46,16 +45,29 @@ article {
 
 h1 {
     margin: auto;
+    color: black;
     width: 50%;
     text-align-last: center;
-    color: black;
     font-size: 46px;
 }
 
-.row {
+h2 {
+    color: #5d1212;
     text-decoration: underline;
+    text-decoration-color: black;
     font-weight: bold;
     font-size: 24px;
+}
+
+span {
+    display: block;
+    background-color: rgb(141, 139, 137);
+    border-style: solid;
+    border-color: black;
+    border-width: .15rem;
+    height: 1rem;
+    width: 100%;
+    border-radius: 1rem;
 }
 
 @media (min-width: 1025px) {
