@@ -21,7 +21,7 @@ article {
     color: #0a3055;
     background-color: #808080;
     border-radius: px;
-    box-shadow: 2px 2px 0 red;
+    box-shadow: 2px 2px 0 black;
     font-size: 200%;
     padding: 3px 3px;
     margin-right: 6px;
@@ -113,6 +113,10 @@ span {
 #container {
     display: grid;
     grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 30% 30% 30%;
+    column-gap: 5%;
+    row-gap: 5%;
+    justify-items: center;
 }    
 
 .grid-item1 {
