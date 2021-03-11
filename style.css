@@ -86,6 +86,19 @@ h2 {
     border-radius: 1rem;
 }
 
+#container {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-item1, .grid-item2 {
+    background-color: #0a3055;
+    color: #abb7b7;
+    text-shadow: none;
+    border-radius: 6px;
+    padding: 1rem;
+}
+
 @media (min-width: 901px) { /* monitors */
 .topnav {
     margin: 0;
@@ -118,7 +131,11 @@ h2 {
 }
 
 .grid-item1, .grid-item2 {
-    background-color: ;
+    background-color: #0a3055;
+    color: #abb7b7;
+    text-shadow: none;
+    border-radius: 6px;
+    padding: 1rem;
     }  
 }
 
@@ -152,6 +169,12 @@ h2 {
         padding: 0;
         background-image: linear-gradient(to right, #805404 25%, yellow);
         box-shadow: 0 0 10px rgb(75, 74, 74);
+  } 
+
+.content-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -185,4 +208,8 @@ button:hover {
 button:active {
     position: relative;
     top: 3px;
+}
+
+a#home:focus {
+    outline: none
 }
