@@ -63,11 +63,13 @@ h1 {
     margin: auto;
     color: black;
     width: 50%;
-    text-align-last: center;
+    text-align: center;
     font-size: 46px;
 }
 
 h2 {
+    display: flex;
+    justify-content: center;
     color: #5d1212;
     text-decoration: underline;
     text-decoration-color: black;
@@ -91,7 +93,7 @@ h2 {
     flex-direction: column;
 }
 
-.grid-item1, .grid-item2 {
+.grid-item {
     background-color: #0a3055;
     color: #abb7b7;
     text-shadow: none;
@@ -128,15 +130,7 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.grid-item1, .grid-item2 {
-    background-color: #0a3055;
-    color: #abb7b7;
-    text-shadow: none;
-    border-radius: 6px;
-    padding: 1rem;
-    }  
+} 
 }
 
 @media (min-width: 401px) and (max-width: 900px) { /* mobile/tablet sizes */
