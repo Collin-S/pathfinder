@@ -178,6 +178,20 @@ h2 {
     justify-content: center;
 }
 
+#dice-face {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #808080;
+    height: 100px;
+    width: 100px;
+    padding: 50px;
+    margin: 50px auto;
+    border: 1px solid white;
+    border-radius: 10px;  
+    font-size:80px;
+}
+
 span {
     display: flex;
     justify-content: center;
@@ -205,19 +219,26 @@ button:active {
 }
 
 /* back to top button */
-#top {
+.scroll-to-top {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#top-btn {
     display: flex;
 	background: linear-gradient(to bottom, #5d1212 5%, #ac2f2f 100%);
 	background-color: #5d1212;
+    box-shadow: 2px 2px 0 black;
 	border-radius: 8px;
 	cursor: pointer;
 	color: white;
 	font-family: sans-serif;
 	font-size: 15px;
+    text-decoration: none;
 	padding: 6px 24px;
 }
 
-#top:hover {
+#top-btn:hover {
     background: linear-gradient(to bottom, #ac2f2f 5%, #5d1212 100% );
     background-color: #ac2f2f;
 }
