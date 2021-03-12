@@ -3,3 +3,14 @@ function rollDice() {
 }
 
 for (let i = 0; i < 5; i++) console.log(rollDice())
+
+var top = document.getElementById("top") // Back to Top button!
+
+var rootElement = document.documentElement
+function scrollToTop() {
+    rootElement.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
+}
+top.addEventListener("click", scrollToTop)
