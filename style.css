@@ -30,6 +30,7 @@ article {
 
 #topnav {               /* nav bar */
     width: 100%;
+    padding: 1rem;
     overflow: hidden;
     position: static;
     top: 0;
@@ -42,7 +43,7 @@ article {
 #topnav label {
     display: inline-block;
     color: #0a3055;
-    background: rgb(219, 145, 47);
+    background: yellow;
     font-size: 1.2em;
     padding: 10px;
 }
@@ -53,6 +54,8 @@ article {
 }
 
 #nav-items a {
+    text-decoration: none;
+    color: #2e343b;
     box-sizing: border-box;
     display: block;
     border-top: 1px solid #0a3055;
@@ -117,14 +120,19 @@ h2 {
 
 @media (min-width: 901px) { /* monitors */
 #topnav {
+    display: flex;
+    justify-content: flex-end;
     width: 100%;
     overflow: hidden;
     position: static;
-    top: 0;
     background-image: linear-gradient(to right, #805404 25%, yellow);
     box-shadow: 0 0 10px rgb(75, 74, 74);
     box-shadow: inset 0 0 10px rgb(75, 74, 74);
     }
+
+#home {
+    display: flex;
+}
 
 #topnav label, #hamburger {
     display: none;
@@ -135,11 +143,11 @@ h2 {
 }
 
 #nav-items a {
-    width: 25%;
     padding: 10px;
-    color: white;
+    color: #2e343b;
     text-decoration: none;
     text-align: center;
+    border: none;
 }
 
 #nav-items a:hover {
@@ -165,8 +173,10 @@ h2 {
 } 
 }
 
-@media (min-width: 401px) and (max-width: 900px) { /* mobile/tablet sizes */
+@media (min-width: 415px) and (max-width: 900px) { /* mobile/tablet sizes */
 #topnav {
+    display: flex;
+    justify-content: flex-end;
     width: 100%;
     overflow: hidden;
     position: static;
@@ -186,16 +196,16 @@ h2 {
 }
 
 #nav-items a {
-    width: 25%;
     padding: 10px;
-    color: white;
+    color: #2e343b;
     text-decoration: none;
     text-align: center;
+    border: none;
 }
 
 }
 
-@media (max-width: 400px) { /* mobile */
+@media (max-width: 414px) { /* mobile */
 
 .content-item {
     display: flex;
@@ -203,6 +213,7 @@ h2 {
     align-items: center;
   }
 }
+
 
 /* dice roller */
 #d20 {
@@ -273,10 +284,6 @@ button:active {
 #top-btn:hover {
     background: linear-gradient(to bottom, #ac2f2f 5%, #5d1212 100% );
     background-color: #ac2f2f;
-}
-
-a#home:focus { /* This stops the webpage from highlighting the border on the home button when refreshing */ 
-    outline: none
 }
 
 /* #test {
