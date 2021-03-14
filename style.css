@@ -75,6 +75,10 @@ article {
     display: none;
 }
 
+.line {
+    display: none;
+}
+
 h1 {
     margin: auto;
     color: black;
@@ -134,12 +138,18 @@ h2 {
     display: flex;
 }
 
+.line {
+    display: initial;
+
+}
+
 #topnav label, #hamburger {
     display: none;
 }
 
 #nav-items {
     display: flex;
+    font-size: 20px;
 }
 
 #nav-items a {
@@ -201,6 +211,10 @@ h2 {
     text-decoration: none;
     text-align: center;
     border: none;
+}
+
+.line {
+    display: initial;
 }
 
 }
