@@ -40,7 +40,7 @@
 
     <span id="pageSplit"></span>
 
-<main> <!-- use grid here. Flexbox individual cells to match sizes of the rest of the cells -->
+<main>
     <div id="container">
         <div class="content-item">
             <h2>The Beginning</h2>
@@ -74,12 +74,37 @@
                     As the assassin is running, Krusk knocks him out and we tie him up. After deliberating for what seemed like an actual hour, we bring him back to the tavern to question him. Before we get into the interrogation, we decide to call the session as it was getting late and decide we will pick up from there in the next session.
                 </p>
         </div>    
-    
+
     </div>     
+
+    <form action="index.html" method="post">
+
+        <h3>Choose My Next Class</h3>
+
+        <fieldset>
+
+            <legend><span class="form"></span>Which of these classes should I try when I inevitably die:</legend>
+            
+            <label for="form-item">Race:</label>
+            <select id="form-item" name="user_form-item"></select>
+                <optgroup label="Race">
+                    <option value="human">Human</option>
+                    <option value="dwarf">Dwarf</option>
+                    <option value="elf">Elf</option>
+                    <option value="gnome">Gnome</option>
+                    <option value="half_elf">Half-Elf</option>
+                    <option value="half_orc">Half-Orc</option>
+                    <option value="halfling">Halfling</option>
+
+                </optgroup>
+
+        </fieldset>
+
+    </form>
 </main>
 
 <section>
-    <h3>Try "rolling" a d20 dice yourself to see what you roll!</h3>
+    <h4>Try "rolling" a d20 dice yourself to see what you roll!</h4>
     <span><button id="button" tabindex="0">Roll d20</button></span>
     <span><div id="dice-face"></div></span>
 </section>
