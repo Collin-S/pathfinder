@@ -1,5 +1,5 @@
 html { 
-  background: url(images/grunge4.jpg) no-repeat center center fixed; 
+  background: url(../images/grunge4.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -170,9 +170,8 @@ h3 {
 #container { /* main content grid layout */
     display: grid;
     grid-template-columns: 30% 30% 30%;
-    grid-template-rows: 30% 30% 30%;
+    grid-auto-rows: 1fr;
     column-gap: 5%;
-    row-gap: 5%;
     justify-items: center;
 }    
 
@@ -183,8 +182,7 @@ h3 {
 }
 
 .grid-item {
-    display: flex;
-    min-height: ;
+    flex-grow: 1;
 }
 
 }
