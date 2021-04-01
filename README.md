@@ -8,3 +8,9 @@ The videos.html and videos.css is the content for when the user clicks on the "V
 
 ## JavaScript features
 The d20 button at the bottom of the page uses a the Math.floor and Math.random function to roll a "d20" and innerHTML to read and replace the content within the "dice face" with the result which we get by clicking the button which uses the onclick function.
+
+### Media Queries
+I have three media queries. 
+- [x] @media (min-width: 901px) This one is for larger screens
+- [x] @media (max-width: 414px) for mobile screens
+- [x] @media (min-width: 415px) and (max-width: 900px) And then I use this one to catch things in between. Mostly for tablet sizes.
