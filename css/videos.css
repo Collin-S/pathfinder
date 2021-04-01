@@ -80,6 +80,10 @@ div {
     justify-content: space-around;
 }
 
+#first-vid {
+    margin-right: 20px;
+}
+
 .to-home {
     display: flex;
     justify-content: center;
@@ -179,6 +183,17 @@ div {
         display: initial;
     }
 
+    #videos {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #first-vid {
+        display: flex;
+        padding-bottom: 1rem;
+    }
+
 }
 
 @media (max-width: 414px) { /* mobile */
@@ -191,5 +206,16 @@ div {
 
     #topnav input:checked ~ #nav-items {
         display: block;
+    }
+
+    #videos {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #first-vid {
+        display: flex;
+        padding-bottom: 1rem;
     }
 }
