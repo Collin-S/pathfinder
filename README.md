@@ -1,6 +1,7 @@
 # pathfinder
 This website is designed to tell you all about the adventures of my pathfinder group! I will include resources, links, and information about tabletop roleplaying games. 
-The videos.html and videos.css is the content for when the user clicks on the "Videos" tab in the nav bar. As well as the "Podcasts" and the "References" tabs redirect to those pages. There isn't anything on those pages. I just did it to show that we can redirect using the nav bar. However, they do contain a back to home button and links to the other two directories.
+The videos.html and videos.css is the content for when the user clicks on the "Videos" tab in the nav bar. As well as the "Podcasts" and the "References" tabs redirect to those pages.
+The references page is for useful websites and applications you can use if you would like to learn or play tabletop RPGs.
 
 ## CSS Features
 - [x] Pure css navigation menu with hamburger button for mobile users
