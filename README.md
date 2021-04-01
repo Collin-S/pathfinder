@@ -1,6 +1,7 @@
 # pathfinder
 This website is designed to tell you all about the adventures of my pathfinder group! I will include resources, links, and information about tabletop roleplaying games. 
-The videos.html and videos.css is the content for when the user clicks on the "Videos" tab in the nav bar. As well as the "Podcasts" and the "References" tabs redirect to those pages.
+
+I used a "mobile first" approach to the layout. The videos.html and videos.css is the content for when the user clicks on the "Videos" tab in the nav bar. As well as the "Podcasts" and the "References" tabs redirect to those pages.
 The references page is for useful websites and applications you can use if you would like to learn or play tabletop RPGs.
 
 ## CSS Features
@@ -14,5 +15,5 @@ The d20 button at the bottom of the page uses a the Math.floor and Math.random f
 ### Media Queries
 I have three media queries. 
 - [x] @media (min-width: 901px) This one is for larger screens
-- [x] @media (max-width: 414px) for mobile screens
+- [x] @media (max-width: 414px) I use this one for mobile screens. Mainly for the hamburger button, but also to change the layout from grid to flex for the sessions content.
 - [x] @media (min-width: 415px) and (max-width: 900px) And then I use this one to catch things in between. Mostly for tablet sizes.
