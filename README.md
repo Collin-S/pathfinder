@@ -5,6 +5,7 @@ The videos.html and videos.css is the content for when the user clicks on the "V
 ## CSS Features
 - [x] Pure css navigation menu with hamburger button for mobile users
 - [x] The main content of the page displayed with css grid for a larger viewport where as they are flex when on tablet and mobile sizes. 
+- [x] I also use #p1::first-letter and #p2::first-letter because I liked it!
 
 ## JavaScript features
 The d20 button at the bottom of the page uses a the Math.floor and Math.random function to roll a "d20" and innerHTML to read and replace the content within the "dice face" with the result which we get by clicking the button which uses the onclick function.
