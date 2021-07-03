@@ -39,10 +39,12 @@ function getSeconds() {
         }
 
 function startTimer(secs) {
-    time = parseInt(time);
+    time = parseInt(secs);
     countdown = setInterval("tick()", 1000);
     tick();
 }
+
+var secs;
 
 function tick() {
     var secs = time;
