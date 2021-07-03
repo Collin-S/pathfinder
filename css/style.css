@@ -330,9 +330,17 @@ button:active {
     background-color: #ac2f2f;
 }
 
-/* #test {
-    width: 0;
-    border-bottom: 100px solid green;
-    border-left: 164px solid transparent;      Trying to make a Hexagon
-    border-right: 164px solid transparent;
-} */ 
+/* Countdown Timer */
+#timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #808080;
+    height: 30%;
+    width: 30%;
+    padding: 50px;
+    margin: 50px auto;
+    border: 1px solid white;
+    border-radius: 10px;  
+    font-size:80px;
+}
