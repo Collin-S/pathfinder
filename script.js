@@ -56,6 +56,21 @@ window.onload = function () {
 // http request for google docs API?
 
 // Contact Form
+var fields = {};
+
 document.addEventListener("DOMContentLoaded", function() {
-    
+    fields.formName = document.getElementById('formName');
+    fields.formEmail = document.getElementById('formEmail');
+    fields.formMessage = document.getElementById('formMessage');
 })
+
+// Checks to verify form fields are not empty
+function notEmpty(value) {
+    if (value == null || typeof value == 'undefined' ) return false;
+    return (value.length > 0);
+}
+
+function isEmail(email) {
+    let regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+    return regex.test(String(email).toLowerCase());
+}
