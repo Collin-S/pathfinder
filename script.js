@@ -53,4 +53,9 @@ window.onload = function () {
     tick();
 }
 
-// http request for google docs API
+// http request for google docs API?
+
+// Contact Form
+document.addEventListener("DOMContentLoaded", function() {
+    
+})

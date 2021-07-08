@@ -136,8 +136,16 @@
 
     <footer>
         <!-- links to contact info and such will go here. -->
-        <p>Contact me for more D&D fun! (Don't do it though, this is just an example)</p>
-        <form id=contactUs >
+        <p>Contact me for more D&D fun!</p>
+        <form id=contactUs onsubmit="return false"> <!-- textarea for a "message" field. -->
+            <input type="text" placeholder="Enter your name" id="formName">
+            <br></br>
+            <input type="email" placeholder="Enter your email" id="formEmail">
+            <br></br>
+            <div id="messageHeader">What's your message?</div>
+            <br>
+            <textarea id="formMessage" rows="5"></textarea>
+            <button onclick="sendMessage();">Send message</button>
 
         </form>
 
