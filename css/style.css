@@ -207,6 +207,22 @@ address {
     .grid-item {
         flex-grow: 1;
     }
+
+    /* Countdown Timer */
+    #timer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #808080;
+        height: 30%;
+        width: 45%;
+        padding: 50px;
+        margin: 50px auto;
+        border: 1px solid white;
+        border-radius: 10px;  
+        font-size:80px;
+    }
+
 }
 
 @media (min-width: 415px) and (max-width: 900px) { /* mobile/tablet sizes */
@@ -242,7 +258,6 @@ address {
     .line {
         display: initial;
     }
-
 }
 
 @media (max-width: 414px) { /* mobile */
@@ -330,17 +345,6 @@ button:active {
     background-color: #ac2f2f;
 }
 
-/* Countdown Timer */
 #timer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #808080;
-    height: 30%;
-    width: 30%;
-    padding: 50px;
-    margin: 50px auto;
-    border: 1px solid white;
-    border-radius: 10px;  
-    font-size:80px;
+    text-align: center;
 }
