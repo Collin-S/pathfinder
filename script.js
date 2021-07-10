@@ -34,6 +34,10 @@ function getMinutes(seconds) {
     return Math.floor(seconds/60);
 }
 
+function zeroPad(num) {
+    return (num < 10 ? "0" : "") + num;
+}
+
 function tick() {
     //The difference between the date and now
     let difference = dateDifference();
@@ -45,7 +49,7 @@ function tick() {
     difference = difference - minutes * 60;
     const seconds = difference;
 
-    document.getElementById("timer").innerHTML = days + ":" + hours + ":" + minutes + ":" + seconds;
+    document.getElementById("timer").innerHTML = zeroPad(days) + ":" + zeroPad(hours) + ":" + zeroPad(minutes) + ":" + zeroPad(seconds);
 }
 
 window.onload = function () {
