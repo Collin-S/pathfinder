@@ -17,10 +17,27 @@ button.onclick = function() {
 
 // Countdown timer
 function dateDifference() {
+    // const now = new Date();
     const now = new Date();
-    const then = new Date("7/11/2021 14:00");
+
     return Math.floor((then - now)/1000);
-} 
+}
+
+const then =  getTargetDate();
+
+function getTargetDate() {
+    const baseline = new Date("6/27/2021 14:00");
+    let dateFound = false;
+    const now = new Date();
+    let targetDate = baseline;
+    while(!dateFound) {
+        targetDate = dateFns.addWeeks(targetDate, 2)
+        if(targetDate - now > 0) {
+            dateFound = true;
+        }
+    }
+    return targetDate;
+}
 
 function getDays(seconds) {
     return Math.floor(seconds/86400);
