@@ -17,16 +17,14 @@ button.onclick = function() {
 
 // Countdown timer
 function dateDifference() {
-    // const now = new Date();
     const now = new Date();
-
     return Math.floor((then - now)/1000);
 }
 
 const then =  getTargetDate();
 
 function getTargetDate() {
-    const baseline = new Date("6/27/2021 14:00");
+    const baseline = new Date("5/30/2021 14:00");
     let dateFound = false;
     const now = new Date();
     let targetDate = baseline;
@@ -91,12 +89,31 @@ function notEmpty(value) {
     return (value.length > 0);
 }
 
-// function isName(text) {
-//     const regex = /^(([A-Za-z]+[\-\']?)*([A-Za-z]+)?\s)+([A-Za-z]+[\-\']?)*([A-Za-z]+)?$/;
-//     return regex.test(String(text).toLowerCase());
-// }
+function isName(text) {
+    const regex = /^(([A-Za-z]+[\-\']?)*([A-Za-z]+)?\s)+([A-Za-z]+[\-\']?)*([A-Za-z]+)?$/;
+    return regex.test(String(text).toLowerCase());
+}
 
 function isEmail(email) {
     const regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
     return regex.test(String(email).toLowerCase());
+}
+
+function sendMessage() { // Form submission that saves the values
+    const name = document.getElementById("formName").value;
+    const email = document.getElementById("formEmail").value;
+        if(isEmail(email) && isName(name)) {
+            fetch('http://localhost:8080/post-form', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                        name: name,
+                        email: email
+                })
+            });
+        } else {
+            alert("Invalid name or email");
+        }
 }
