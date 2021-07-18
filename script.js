@@ -23,13 +23,27 @@ function dateDifference() {
 
 const then =  getTargetDate();
 
+const addWeeks = (date, numWeeks) => {
+    const timestampInMilliseconds = date.getTime();
+    const millisecondsPerWeek = 1000 * 60 * 60 * 24 * 7;
+    const millisecondsToAdd = numWeeks * millisecondsPerWeek;
+    return new Date(timestampInMilliseconds + millisecondsToAdd);
+  };
+
 function getTargetDate() {
+    const addWeeks = (date, numWeeks) => {
+    const timestampInMilliseconds = date.getTime();
+    const millisecondsPerWeek = 1000 * 60 * 60 * 24 * 7;
+    const millisecondsToAdd = numWeeks * millisecondsPerWeek;
+    return new Date(timestampInMilliseconds + millisecondsToAdd);
+    };
+
     const baseline = new Date("5/30/2021 14:00");
     let dateFound = false;
     const now = new Date();
     let targetDate = baseline;
     while(!dateFound) {
-        targetDate = dateFns.addWeeks(targetDate, 2)
+        targetDate = addWeeks(targetDate, 2)
         if(targetDate - now > 0) {
             dateFound = true;
         }
@@ -100,27 +114,27 @@ function isEmail(email) {
 const form = document.getElementById('contactUs');
 if (form) {
   form.addEventListener('submit', (event) => {
-    // This prevents the default way a browser handles submitting forms,
-    // sending a request to the URL in the form's action attribute.
+
     event.preventDefault();
-    // Now you can gather the form data and send it to the server using fetch.
+
     const name = document.getElementById('formName').value;
     const email = document.getElementById('formEmail').value;
     const message = document.getElementById('formMessage').value;
-    const response = fetch('http://localhost:8080/post-form', {
-      method: 'POST',
-      headers: {
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-      },
-      body: {
-        name,
-        email,
-        message,
-      },
-    }).then((response) => {
-      // Do something with the response from the server
-      console.log(response);
-    });
+	if(isEmail(email) && isName(name)) {
+      fetch('http://localhost:8080/post-form', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          message: message
+        })
+      });
+    } else {
+        alert("Invalid name or email");
+    }
   });
 }

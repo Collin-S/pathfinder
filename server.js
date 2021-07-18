@@ -5,17 +5,17 @@ const {parse} = require ('querystring');
 
 http.createServer(function (request, response) {
     console.log('Request: ', request.url);
-
     var filePath = './' + request.url;
     if (request.url === '/') {
         filePath = './index.html';
     }
-
     if (request.url === '/post-form') {
-        // save form data, redirect
-        console.log('This message when you click "Send message button"'); // look up "node HTTP POST data"
+        request.on('data', jsonData => {
+            const data = JSON.parse(jsonData.toString());
+            console.log(data);
+            // Save the data to a file.
+        });
     }
-
     var extname = String(path.extname(filePath)).toLowerCase();
     var mimeTypes = {
         '.html': 'text/html',
@@ -34,9 +34,7 @@ http.createServer(function (request, response) {
         '.otf': 'application/font-otf',
         '.wasm': 'application/wasm'
     };
-
     var contentType = mimeTypes[extname] || 'application/octet-stream';
-
     fs.readFile(filePath, function(error, content) {
         if (error) {
             if(error.code == 'ENOENT') {
@@ -55,7 +53,5 @@ http.createServer(function (request, response) {
             response.end(content, 'utf-8');
         }
     });
-
 }).listen(8080);
 console.log('Server running at http://127.0.0.1:8080/');
-
