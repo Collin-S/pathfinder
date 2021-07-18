@@ -11,7 +11,8 @@ The references page is for useful websites and applications you can use if you w
 
 ## JavaScript features
 The d20 button at the bottom of the page uses a the Math.floor and Math.random function to roll a "d20" and innerHTML to read and replace the content within the "dice face" with the result which we get by clicking the button which uses the onclick function.
-
+- [x] Implement a regular expression (regex) to ensure a field either a phone number or an email address is always stored and displayed in the same format. I use the regex to validate the name and email field.
+- [x] Calculate and display data based on an external factor (ex: get the current date, and display how many days remaining until some event).
 ### Media Queries
 I have three media queries. 
 - [x] @media (min-width: 901px) This one is for larger screens

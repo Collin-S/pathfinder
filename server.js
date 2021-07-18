@@ -1,6 +1,7 @@
 var http = require('http');
 var fs = require('fs');
 var path = require('path');
+const {parse} = require ('querystring');
 
 http.createServer(function (request, response) {
     console.log('Request: ', request.url);
@@ -12,7 +13,7 @@ http.createServer(function (request, response) {
 
     if (request.url === '/post-form') {
         // save form data, redirect
-        console.log("a string of some sort"); // look up "node HTTP POST data"
+        console.log('This message when you click "Send message button"'); // look up "node HTTP POST data"
     }
 
     var extname = String(path.extname(filePath)).toLowerCase();
@@ -57,3 +58,4 @@ http.createServer(function (request, response) {
 
 }).listen(8080);
 console.log('Server running at http://127.0.0.1:8080/');
+

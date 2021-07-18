@@ -72,8 +72,6 @@ window.onload = function () {
     tick();
 }
 
-// http request for google docs API?
-
 // Contact Form
 var fields = {};
 
@@ -99,21 +97,30 @@ function isEmail(email) {
     return regex.test(String(email).toLowerCase());
 }
 
-function sendMessage() { // Form submission that saves the values
-    const name = document.getElementById("formName").value;
-    const email = document.getElementById("formEmail").value;
-        if(isEmail(email) && isName(name)) {
-            fetch('http://localhost:8080/post-form', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                        name: name,
-                        email: email
-                })
-            });
-        } else {
-            alert("Invalid name or email");
-        }
+const form = document.getElementById('contactUs');
+if (form) {
+  form.addEventListener('submit', (event) => {
+    // This prevents the default way a browser handles submitting forms,
+    // sending a request to the URL in the form's action attribute.
+    event.preventDefault();
+    // Now you can gather the form data and send it to the server using fetch.
+    const name = document.getElementById('formName').value;
+    const email = document.getElementById('formEmail').value;
+    const message = document.getElementById('formMessage').value;
+    const response = fetch('http://localhost:8080/post-form', {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: {
+        name,
+        email,
+        message,
+      },
+    }).then((response) => {
+      // Do something with the response from the server
+      console.log(response);
+    });
+  });
 }
