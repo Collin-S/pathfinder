@@ -14,6 +14,8 @@ http.createServer(function (request, response) {
             const data = JSON.parse(jsonData.toString());
             console.log(data);
             // Save the data to a file.
+            response.writeHead(200);
+            response.end();
         });
     }
     var extname = String(path.extname(filePath)).toLowerCase();

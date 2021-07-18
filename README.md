@@ -9,7 +9,7 @@ The references page is for useful websites and applications you can use if you w
 - [x] The main content of the page displayed with css grid for a larger viewport where as they are flex when on tablet and mobile sizes. 
 - [x] I also use #p1::first-letter and #p2::first-letter because I liked it!
 
-## JavaScript features
+## JavaScript Features
 The d20 button at the bottom of the page uses a the Math.floor and Math.random function to roll a "d20" and innerHTML to read and replace the content within the "dice face" with the result which we get by clicking the button which uses the onclick function.
 - [x] Implement a regular expression (regex) to ensure a field either a phone number or an email address is always stored and displayed in the same format. I use the regex to validate the name and email field.
 - [x] Calculate and display data based on an external factor (ex: get the current date, and display how many days remaining until some event).

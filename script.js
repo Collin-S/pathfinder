@@ -114,7 +114,6 @@ function isEmail(email) {
 const form = document.getElementById('contactUs');
 if (form) {
   form.addEventListener('submit', (event) => {
-
     event.preventDefault();
 
     const name = document.getElementById('formName').value;
