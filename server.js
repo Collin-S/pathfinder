@@ -1,7 +1,6 @@
 var http = require("http");
 var fs = require("fs");
 var path = require("path");
-const { parse } = require("querystring");
 
 http
   .createServer(function (request, response) {
@@ -15,7 +14,14 @@ http
         const data = JSON.parse(jsonData.toString());
         console.log(data);
         // Save the data to a file.
-        
+        jsonData = jsonData.toString() + "\n";
+        fs.writeFile('contactUs.txt', jsonData, {flag: 'a' }, err => {
+            if (err) {
+              console.error(err)
+              return
+            }
+            //file written successfully
+          })
 
         response.writeHead(200);
         response.end();
