@@ -14,6 +14,7 @@ The d20 button at the bottom of the page uses a the Math.floor and Math.random f
 - [x] Implement a regular expression (regex) to ensure a field either a phone number or an email address is always stored and displayed in the same format. I use the regex to validate the name and email field.
 - [x] Calculate and display data based on an external factor (ex: get the current date, and display how many days remaining until some event).
 - [x] Create a form and save the values (on click of Submit button) to an external file. You must show us or document where that information is being stored so we can confirm that it’s being saved/persisted (currently shows up in the terminal). The "Contact me for more D&D fun!" form is the form that saves. The form for choosing my next class is just a css/html example. The data gets saved server side in the contactUs.txt file.
+I use a local host server (8080) with node.js.
 
 ### Media Queries
 I have three media queries. 
