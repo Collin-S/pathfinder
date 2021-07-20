@@ -141,6 +141,8 @@ if (form) {
           message: message,
         }),
       });
+      document.querySelector("#contactButton")
+        .textContent = "Message sent!"; // Changes send message button on successful send
     } else {
       alert("Invalid name or email");
     }
