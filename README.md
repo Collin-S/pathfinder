@@ -4,6 +4,8 @@ This website is designed to tell you all about the adventures of my pathfinder g
 I used a "mobile first" approach to the layout. The videos.html and videos.css is the content for when the user clicks on the "Videos" tab in the nav bar. As well as the "Podcasts" and the "References" tabs redirect to those pages.
 The references page is for useful websites and applications you can use if you would like to learn or play tabletop RPGs.
 
+You will need node downloaded to run the server.
+
 ## CSS Features
 - [x] Pure css navigation menu with hamburger button for mobile users
 - [x] The main content of the page displayed with css grid for a larger viewport where as they are flex when on tablet and mobile sizes. 
