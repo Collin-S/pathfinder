@@ -150,9 +150,16 @@ if (form) {
 // Enter key to submit form data
 var input = document.getElementById("formMessage");
 
-input.addEventListener("keyup", function(event) {
-  if (event.keyCode === 13) {
-    event.preventDefault();
-    document.getElementById("contactButton").click();
+input.addEventListener('keydown', function(e) {
+  const keyCode = e.which || e.keyCode;
+  if (keyCode === 13 && !e.shiftKey) {
+      e.preventDefault();
+      document.getElementById("contactButton").click();
   }
 });
+// input.addEventListener("keyup", function(event) {
+//   if (event.keyCode === 13) {
+//     event.preventDefault();
+//     document.getElementById("contactButton").click();
+//   }
+// });
