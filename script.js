@@ -150,9 +150,9 @@ if (form) {
 }
 
 // Enter key to submit form data
-const input = document.getElementById("formMessage");
+const enterKey = document.getElementById("formMessage");
 
-input.addEventListener('keydown', function(e) {
+enterKey.addEventListener('keydown', function(e) {
   const keyCode = e.which || e.keyCode;
   if (keyCode === 13 && !e.shiftKey) {
       e.preventDefault();

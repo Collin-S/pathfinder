@@ -4,7 +4,7 @@ This website is designed to tell you all about the adventures of my pathfinder g
 I used a "mobile first" approach to the layout. The videos.html and videos.css is the content for when the user clicks on the "Videos" tab in the nav bar. As well as the "Podcasts" and the "References" tabs redirect to those pages.
 The references page is for useful websites and applications you can use if you would like to learn or play tabletop RPGs.
 
-You will need node downloaded to run the server.
+You will need at least Node 14+ to run the server associated with this project. With Node 14+ installed, you can run `node server.js`. Once the server is running, it will be available on port http://localhost:8080/.
 
 ## CSS Features
 - [x] Pure css navigation menu with hamburger button for mobile users
